@@ -1,0 +1,115 @@
+{
+  "configuration_count": 243,
+  "decision_count": 2187,
+  "nominal_matches": 1984,
+  "nominal_agreement_percent": 90.72,
+  "fully_unchanged_configurations": 70,
+  "minimum_configuration_matches": 7,
+  "minimum_configuration_agreement_percent": 77.78,
+  "high_confusion_decisions": 729,
+  "high_confusion_scaffolding": 729,
+  "challenge_decisions": 81,
+  "nominal_actions": {
+    "mastery=0.2,confusion=0.14": "socratic",
+    "mastery=0.2,confusion=0.5": "scaffolding",
+    "mastery=0.2,confusion=0.8444444444444442": "scaffolding",
+    "mastery=0.5,confusion=0.14": "socratic",
+    "mastery=0.5,confusion=0.5": "socratic",
+    "mastery=0.5,confusion=0.8444444444444442": "scaffolding",
+    "mastery=0.8,confusion=0.14": "socratic",
+    "mastery=0.8,confusion=0.5": "socratic",
+    "mastery=0.8,confusion=0.8444444444444442": "scaffolding"
+  },
+  "one_at_a_time": {
+    "sigma": {
+      "tested_values": [
+        0.18,
+        0.22,
+        0.26
+      ],
+      "agreements_out_of_9": [
+        8,
+        9,
+        8
+      ],
+      "minimum_agreement": 8,
+      "high_confusion_scaffold_out_of_9": [
+        3,
+        3,
+        3
+      ]
+    },
+    "gamma": {
+      "tested_values": [
+        0.5,
+        0.75,
+        0.9
+      ],
+      "agreements_out_of_9": [
+        9,
+        9,
+        8
+      ],
+      "minimum_agreement": 8,
+      "high_confusion_scaffold_out_of_9": [
+        3,
+        3,
+        3
+      ]
+    },
+    "alpha": {
+      "tested_values": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "agreements_out_of_9": [
+        9,
+        9,
+        9
+      ],
+      "minimum_agreement": 9,
+      "high_confusion_scaffold_out_of_9": [
+        3,
+        3,
+        3
+      ]
+    },
+    "beta": {
+      "tested_values": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "agreements_out_of_9": [
+        8,
+        9,
+        9
+      ],
+      "minimum_agreement": 8,
+      "high_confusion_scaffold_out_of_9": [
+        3,
+        3,
+        3
+      ]
+    },
+    "lambda": {
+      "tested_values": [
+        0.0,
+        0.1,
+        0.2
+      ],
+      "agreements_out_of_9": [
+        9,
+        9,
+        9
+      ],
+      "minimum_agreement": 9,
+      "high_confusion_scaffold_out_of_9": [
+        3,
+        3,
+        3
+      ]
+    }
+  }
+}

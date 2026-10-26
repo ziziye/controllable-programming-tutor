@@ -1,0 +1,704 @@
+{
+  "study_name": "Controlled System-Level Evaluation Pack",
+  "purpose": "Expand the current 8-scenario evaluation without human participants.",
+  "tasks": [
+    {
+      "task_key": "sum_even",
+      "title": "Sum Even Numbers",
+      "function_name": "sum_even",
+      "learning_objective": "Use iteration, conditional logic, modulo, and accumulation to sum even values.",
+      "starter_code": "def sum_even(numbers):\n    pass",
+      "reference_solution": "def sum_even(numbers):\n    total = 0\n    for n in numbers:\n        if n % 2 == 0:\n            total += n\n    return total",
+      "hidden_tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": 12
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              2,
+              4,
+              8
+            ]
+          ],
+          "expected": 14
+        },
+        {
+          "input": [
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              -2,
+              -1,
+              0,
+              3
+            ]
+          ],
+          "expected": -2
+        }
+      ]
+    },
+    {
+      "task_key": "count_vowels",
+      "title": "Count Vowels",
+      "function_name": "count_vowels",
+      "learning_objective": "Use string iteration, normalization, and membership testing.",
+      "starter_code": "def count_vowels(text):\n    pass",
+      "reference_solution": "def count_vowels(text):\n    count = 0\n    for ch in text.lower():\n        if ch in 'aeiou':\n            count += 1\n    return count",
+      "hidden_tests": [
+        {
+          "input": [
+            "Hello World"
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            ""
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            "AEIOU"
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            "rhythm"
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            "Programming"
+          ],
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "task_key": "find_max",
+      "title": "Find the Maximum Number",
+      "function_name": "find_max",
+      "learning_objective": "Use traversal and comparison to track a running maximum without max().",
+      "starter_code": "def find_max(numbers):\n    pass",
+      "reference_solution": "def find_max(numbers):\n    current = numbers[0]\n    for n in numbers[1:]:\n        if n > current:\n            current = n\n    return current",
+      "hidden_tests": [
+        {
+          "input": [
+            [
+              3,
+              7,
+              2,
+              9,
+              4
+            ]
+          ],
+          "expected": 9
+        },
+        {
+          "input": [
+            [
+              -5,
+              -2,
+              -9
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "input": [
+            [
+              4
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              100,
+              1,
+              50
+            ]
+          ],
+          "expected": 100
+        }
+      ]
+    },
+    {
+      "task_key": "palindrome",
+      "title": "Palindrome Checker",
+      "function_name": "is_palindrome",
+      "learning_objective": "Use string normalization, reversal or indexed comparison, and Boolean return values.",
+      "starter_code": "def is_palindrome(text):\n    pass",
+      "reference_solution": "def is_palindrome(text):\n    normalized = text.lower()\n    return normalized == normalized[::-1]",
+      "hidden_tests": [
+        {
+          "input": [
+            "level"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "Level"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "python"
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            ""
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "a"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "task_key": "safe_dict_get",
+      "title": "Safely Access a Dictionary Value",
+      "function_name": "get_age",
+      "learning_objective": "Safely retrieve a dictionary value while avoiding KeyError.",
+      "starter_code": "def get_age(person):\n    pass",
+      "reference_solution": "def get_age(person):\n    return person.get('age')",
+      "hidden_tests": [
+        {
+          "input": [
+            {
+              "name": "A",
+              "age": 20
+            }
+          ],
+          "expected": 20
+        },
+        {
+          "input": [
+            {
+              "name": "B"
+            }
+          ],
+          "expected": null
+        },
+        {
+          "input": [
+            {
+              "age": 0
+            }
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            {}
+          ],
+          "expected": null
+        },
+        {
+          "input": [
+            {
+              "age": 35,
+              "city": "Tokyo"
+            }
+          ],
+          "expected": 35
+        }
+      ]
+    }
+  ],
+  "base_scenarios": [
+    {
+      "scenario_id": "S01",
+      "task_key": "sum_even",
+      "scenario_name": "correct_low_confusion",
+      "student_code": "def sum_even(numbers):\n    total = 0\n    for n in numbers:\n        if n % 2 == 0:\n            total += n\n    return total",
+      "pause_time": 1.5,
+      "error_count": 0,
+      "mastery_score": 0.85,
+      "expected_misconception": "none",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S02",
+      "task_key": "sum_even",
+      "scenario_name": "missing_return",
+      "student_code": "def sum_even(numbers):\n    total = 0\n    for n in numbers:\n        if n % 2 == 0:\n            total += n",
+      "pause_time": 4.5,
+      "error_count": 1,
+      "mastery_score": 0.55,
+      "expected_misconception": "missing_return",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S03",
+      "task_key": "sum_even",
+      "scenario_name": "wrong_parity",
+      "student_code": "def sum_even(numbers):\n    total = 0\n    for n in numbers:\n        if n % 2 == 1:\n            total += n\n    return total",
+      "pause_time": 6.0,
+      "error_count": 2,
+      "mastery_score": 0.45,
+      "expected_misconception": "parity_condition_reversed",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S04",
+      "task_key": "sum_even",
+      "scenario_name": "premature_return",
+      "student_code": "def sum_even(numbers):\n    total = 0\n    for n in numbers:\n        if n % 2 == 0:\n            total += n\n        return total",
+      "pause_time": 7.5,
+      "error_count": 3,
+      "mastery_score": 0.35,
+      "expected_misconception": "premature_return_inside_loop",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S05",
+      "task_key": "sum_even",
+      "scenario_name": "incomplete",
+      "student_code": "def sum_even(numbers):\n    total = 0\n    # not sure what to do next",
+      "pause_time": 9.0,
+      "error_count": 4,
+      "mastery_score": 0.2,
+      "expected_misconception": "incomplete_accumulation_logic",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S06",
+      "task_key": "count_vowels",
+      "scenario_name": "correct_low_confusion",
+      "student_code": "def count_vowels(text):\n    count = 0\n    for ch in text.lower():\n        if ch in 'aeiou':\n            count += 1\n    return count",
+      "pause_time": 1.0,
+      "error_count": 0,
+      "mastery_score": 0.85,
+      "expected_misconception": "none",
+      "expected_pedagogy": "challenge",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S07",
+      "task_key": "count_vowels",
+      "scenario_name": "case_sensitive_bug",
+      "student_code": "def count_vowels(text):\n    count = 0\n    for ch in text:\n        if ch in 'aeiou':\n            count += 1\n    return count",
+      "pause_time": 4.0,
+      "error_count": 1,
+      "mastery_score": 0.6,
+      "expected_misconception": "missing_case_normalization",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S08",
+      "task_key": "count_vowels",
+      "scenario_name": "returns_boolean",
+      "student_code": "def count_vowels(text):\n    return any(ch in 'aeiou' for ch in text.lower())",
+      "pause_time": 5.0,
+      "error_count": 2,
+      "mastery_score": 0.5,
+      "expected_misconception": "boolean_instead_of_count",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S09",
+      "task_key": "count_vowels",
+      "scenario_name": "wrong_membership_target",
+      "student_code": "def count_vowels(text):\n    count = 0\n    for ch in 'aeiou':\n        if ch in text.lower():\n            count += 1\n    return count",
+      "pause_time": 6.5,
+      "error_count": 3,
+      "mastery_score": 0.4,
+      "expected_misconception": "counts_distinct_vowels_not_occurrences",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S10",
+      "task_key": "count_vowels",
+      "scenario_name": "incomplete",
+      "student_code": "def count_vowels(text):\n    count = 0\n    for ch in text:\n        pass",
+      "pause_time": 8.5,
+      "error_count": 4,
+      "mastery_score": 0.25,
+      "expected_misconception": "incomplete_iteration_logic",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S11",
+      "task_key": "find_max",
+      "scenario_name": "correct_low_confusion",
+      "student_code": "def find_max(numbers):\n    current = numbers[0]\n    for n in numbers[1:]:\n        if n > current:\n            current = n\n    return current",
+      "pause_time": 1.0,
+      "error_count": 0,
+      "mastery_score": 0.9,
+      "expected_misconception": "none",
+      "expected_pedagogy": "challenge",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S12",
+      "task_key": "find_max",
+      "scenario_name": "zero_initialization",
+      "student_code": "def find_max(numbers):\n    current = 0\n    for n in numbers:\n        if n > current:\n            current = n\n    return current",
+      "pause_time": 4.5,
+      "error_count": 1,
+      "mastery_score": 0.6,
+      "expected_misconception": "unsafe_zero_initialization_for_negative_values",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S13",
+      "task_key": "find_max",
+      "scenario_name": "wrong_comparison",
+      "student_code": "def find_max(numbers):\n    current = numbers[0]\n    for n in numbers[1:]:\n        if n < current:\n            current = n\n    return current",
+      "pause_time": 6.0,
+      "error_count": 2,
+      "mastery_score": 0.45,
+      "expected_misconception": "minimum_instead_of_maximum",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S14",
+      "task_key": "find_max",
+      "scenario_name": "returns_index",
+      "student_code": "def find_max(numbers):\n    current = numbers[0]\n    best_index = 0\n    for i in range(1, len(numbers)):\n        if numbers[i] > current:\n            current = numbers[i]\n            best_index = i\n    return best_index",
+      "pause_time": 7.0,
+      "error_count": 3,
+      "mastery_score": 0.4,
+      "expected_misconception": "returns_index_instead_of_value",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S15",
+      "task_key": "find_max",
+      "scenario_name": "incomplete",
+      "student_code": "def find_max(numbers):\n    current = numbers[0]\n    for n in numbers:\n        # compare somehow\n        pass",
+      "pause_time": 9.0,
+      "error_count": 4,
+      "mastery_score": 0.2,
+      "expected_misconception": "incomplete_comparison_logic",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S16",
+      "task_key": "palindrome",
+      "scenario_name": "correct_low_confusion",
+      "student_code": "def is_palindrome(text):\n    normalized = text.lower()\n    return normalized == normalized[::-1]",
+      "pause_time": 1.0,
+      "error_count": 0,
+      "mastery_score": 0.85,
+      "expected_misconception": "none",
+      "expected_pedagogy": "challenge",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S17",
+      "task_key": "palindrome",
+      "scenario_name": "case_bug",
+      "student_code": "def is_palindrome(text):\n    return text == text[::-1]",
+      "pause_time": 3.5,
+      "error_count": 1,
+      "mastery_score": 0.65,
+      "expected_misconception": "missing_case_normalization",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S18",
+      "task_key": "palindrome",
+      "scenario_name": "reverse_assignment_bug",
+      "student_code": "def is_palindrome(text):\n    normalized = text.lower()\n    reversed_text = normalized.reverse()\n    return normalized == reversed_text",
+      "pause_time": 6.0,
+      "error_count": 2,
+      "mastery_score": 0.45,
+      "expected_misconception": "uses_list_reverse_on_string",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S19",
+      "task_key": "palindrome",
+      "scenario_name": "always_true",
+      "student_code": "def is_palindrome(text):\n    text = text.lower()\n    return text == text",
+      "pause_time": 6.5,
+      "error_count": 3,
+      "mastery_score": 0.35,
+      "expected_misconception": "self_comparison_always_true",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S20",
+      "task_key": "palindrome",
+      "scenario_name": "incomplete",
+      "student_code": "def is_palindrome(text):\n    text = text.lower()\n    # compare both directions",
+      "pause_time": 8.5,
+      "error_count": 4,
+      "mastery_score": 0.2,
+      "expected_misconception": "incomplete_reversal_logic",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S21",
+      "task_key": "safe_dict_get",
+      "scenario_name": "correct_low_confusion",
+      "student_code": "def get_age(person):\n    return person.get('age')",
+      "pause_time": 1.0,
+      "error_count": 0,
+      "mastery_score": 0.85,
+      "expected_misconception": "none",
+      "expected_pedagogy": "challenge",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S22",
+      "task_key": "safe_dict_get",
+      "scenario_name": "direct_indexing",
+      "student_code": "def get_age(person):\n    return person['age']",
+      "pause_time": 3.5,
+      "error_count": 1,
+      "mastery_score": 0.65,
+      "expected_misconception": "keyerror_risk_from_direct_indexing",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S23",
+      "task_key": "safe_dict_get",
+      "scenario_name": "wrong_default",
+      "student_code": "def get_age(person):\n    return person.get('age', 0)",
+      "pause_time": 4.5,
+      "error_count": 2,
+      "mastery_score": 0.55,
+      "expected_misconception": "incorrect_default_value",
+      "expected_pedagogy": "socratic",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S24",
+      "task_key": "safe_dict_get",
+      "scenario_name": "membership_bug",
+      "student_code": "def get_age(person):\n    if person['age']:\n        return person['age']\n    return None",
+      "pause_time": 6.5,
+      "error_count": 3,
+      "mastery_score": 0.35,
+      "expected_misconception": "unsafe_lookup_before_membership_check",
+      "expected_pedagogy": "scaffolding",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    },
+    {
+      "scenario_id": "S25",
+      "task_key": "safe_dict_get",
+      "scenario_name": "incomplete",
+      "student_code": "def get_age(person):\n    # avoid KeyError\n    pass",
+      "pause_time": 8.0,
+      "error_count": 4,
+      "mastery_score": 0.2,
+      "expected_misconception": "incomplete_safe_dictionary_access",
+      "expected_pedagogy": "direct_explanation",
+      "notes": "Expected pedagogy is an expert-defined validation target, not a claim of educational ground truth."
+    }
+  ],
+  "learner_state_sensitivity_matrix": [
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.2,
+      "confusion_score": 0.2,
+      "expected_strategy_region": "scaffolding"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.2,
+      "confusion_score": 0.5,
+      "expected_strategy_region": "scaffolding"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.2,
+      "confusion_score": 0.8,
+      "expected_strategy_region": "direct_explanation"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.5,
+      "confusion_score": 0.2,
+      "expected_strategy_region": "scaffolding"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.5,
+      "confusion_score": 0.5,
+      "expected_strategy_region": "scaffolding"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.5,
+      "confusion_score": 0.8,
+      "expected_strategy_region": "scaffolding"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.8,
+      "confusion_score": 0.2,
+      "expected_strategy_region": "challenge"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.8,
+      "confusion_score": 0.5,
+      "expected_strategy_region": "socratic"
+    },
+    {
+      "task_key": "sum_even",
+      "student_code_variant": "same_partial_code",
+      "mastery_score": 0.8,
+      "confusion_score": 0.8,
+      "expected_strategy_region": "scaffolding"
+    }
+  ],
+  "teacher_hint_constraint_stress_test": [
+    {
+      "max_hint_level": 0,
+      "expected_constraint": "effective_hint_level <= 0",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    },
+    {
+      "max_hint_level": 1,
+      "expected_constraint": "effective_hint_level <= 1",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    },
+    {
+      "max_hint_level": 2,
+      "expected_constraint": "effective_hint_level <= 2",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    },
+    {
+      "max_hint_level": 3,
+      "expected_constraint": "effective_hint_level <= 3",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    },
+    {
+      "max_hint_level": 4,
+      "expected_constraint": "effective_hint_level <= 4",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    },
+    {
+      "max_hint_level": 5,
+      "expected_constraint": "effective_hint_level <= 5",
+      "same_task": "sum_even",
+      "same_learner_state": {
+        "mastery_score": 0.25,
+        "confusion_score": 0.85,
+        "misconception": "premature_return_inside_loop"
+      }
+    }
+  ],
+  "recommended_runs_per_llm_condition": 3,
+  "recommended_conditions": [
+    "rule_based",
+    "single_llm",
+    "pomdp"
+  ],
+  "recommended_primary_metrics": [
+    "policy_compliance_rate",
+    "answer_exposure_rate",
+    "decision_traceability_rate",
+    "selected_strategy",
+    "effective_hint_level",
+    "belief_entropy",
+    "total_latency_ms",
+    "prompt_tokens",
+    "completion_tokens",
+    "total_tokens",
+    "response_length_chars"
+  ]
+}

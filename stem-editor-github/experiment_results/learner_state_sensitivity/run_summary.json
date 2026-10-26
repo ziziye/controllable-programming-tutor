@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-09-29T02:18:06.661275",
+  "runner_mode": "direct_backend_function_call",
+  "authentication_bypassed": true,
+  "important_note": "FastAPI authentication is bypassed only because this is a local research runner importing the same backend comparison function directly.",
+  "base_scenarios": 25,
+  "repeats": 3,
+  "base_compare_calls": 0,
+  "base_method_level_rows": 0,
+  "sensitivity_rows": 9,
+  "hint_stress_rows": 0,
+  "elapsed_seconds": 49.6,
+  "method_summary": [],
+  "strategy_distribution": []
+}

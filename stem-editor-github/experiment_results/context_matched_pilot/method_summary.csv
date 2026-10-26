@@ -1,0 +1,3 @@
+﻿method,n,mean_prompt_tokens,sd_prompt_tokens,mean_completion_tokens,sd_completion_tokens,mean_generation_tokens,sd_generation_tokens,mean_llm_request_latency_ms,sd_llm_request_latency_ms,mean_method_stage_latency_ms,sd_method_stage_latency_ms
+context_matched_single_llm,30,1009.4,18.594771233908183,77.03333333333333,15.6876479706352,1086.4333333333334,31.165501852964383,2412.3503333333333,365.524313276746,2414.5463033322208,365.949074933921
+externally_planned,30,1572.8,24.481379271488827,116.0,47.12565740875024,1688.8,66.57347509486715,3096.168,862.3595857813407,3099.8554866668806,862.5210065721908

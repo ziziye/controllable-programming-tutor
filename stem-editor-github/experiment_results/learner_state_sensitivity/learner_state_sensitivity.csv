@@ -1,0 +1,10 @@
+﻿mastery_concept_used,target_mastery,actual_mastery,mastery_override_applied,behavior_condition,pause_time,error_count,actual_confusion,strategy,hint_level,answer_policy,most_likely_state,belief_entropy
+loops,0.2,0.2,True,low,1.0,0,0.14,socratic,1,HINT_ONLY,low_low,1.7857
+loops,0.2,0.2,True,medium,4.5,2,0.5,scaffolding,2,PARTIAL_SOLUTION,low_medium,2.4007
+loops,0.2,0.2,True,high,9.0,4,0.844,scaffolding,2,PARTIAL_SOLUTION,low_high,1.8253
+loops,0.5,0.5,True,low,1.0,0,0.14,socratic,1,HINT_ONLY,medium_low,2.2472
+loops,0.5,0.5,True,medium,4.5,2,0.5,socratic,1,HINT_ONLY,medium_medium,2.8622
+loops,0.5,0.5,True,high,9.0,4,0.844,scaffolding,2,PARTIAL_SOLUTION,medium_high,2.2868
+loops,0.8,0.8,True,low,1.0,0,0.14,socratic,1,HINT_ONLY,high_low,1.7857
+loops,0.8,0.8,True,medium,4.5,2,0.5,socratic,1,HINT_ONLY,high_medium,2.4007
+loops,0.8,0.8,True,high,9.0,4,0.844,scaffolding,2,PARTIAL_SOLUTION,high_high,1.8253

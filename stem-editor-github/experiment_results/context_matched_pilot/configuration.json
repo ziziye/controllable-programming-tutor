@@ -1,0 +1,36 @@
+{
+  "scenario_ids": [
+    "S02",
+    "S08",
+    "S12",
+    "S19",
+    "S22"
+  ],
+  "ceilings": [
+    1,
+    2
+  ],
+  "repeats": 3,
+  "seed": 20261013,
+  "expected_model": "qwen3.7-plus",
+  "temperature": 0.3,
+  "max_tokens": 350,
+  "mastery": 0.5,
+  "history": "empty",
+  "profile": "neutral",
+  "data_sha256": "1112d9bcba2a19501118aac49405e437167d7eb8b575fe6bca10d967d12518f5",
+  "pilot_scope": "Five predefined scenarios, one per task; not the complete 25-scenario benchmark.",
+  "provider": "qwen",
+  "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "baseline_prompt_sha256": "237d658dd4f1cd733bdd260ee3548bb6b9a37412a04eef6c1122fc4216ec0df8",
+  "source_files_sha256": {
+    "api\\tutor.py": "6ea6eb2c68b5f0ffbf2b7a98f7819c44c0848790283902ee21a652953f5ed4b0",
+    "agents\\tutor_executor.py": "1c051796bd9be24adf0ad150defe9a3a35c747acac38829a46abb11655283738",
+    "services\\llm_service.py": "8709bcc9676605b4fbfc2601e7072b7fc75950703def5eae77210fdf07f24c94",
+    "pedagogy\\planner.py": "7bb030b548843ad8882b0a3908f809b0c94e01c3626c4a8967868501e66f3cdd",
+    "pedagogy\\pomdp.py": "e8f7dc7afd688ae2a2ca33d9fabe548705caef4fb09f62016f868bfae5b8f2b5",
+    "pedagogy\\belief_state.py": "d007d80bd9797982d0422d73dfbfd9ff69515d073175ea1167487450923d0282",
+    "pedagogy\\reward.py": "ae2658653b11b49ff905e1b4e638958ae218aa951d1d5aec68cbc8c4bb12f196",
+    "fuzzy\\confusion_system.py": "6ced0c528bb6c316e62294b3caf49f6c78f7da4a59968d6aa1a13b364099cafc"
+  }
+}

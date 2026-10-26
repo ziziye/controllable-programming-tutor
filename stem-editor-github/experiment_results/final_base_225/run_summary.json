@@ -1,0 +1,64 @@
+{
+  "recovered_at": "2026-09-29T01:46:44.936772",
+  "source": "experiment_logs table",
+  "requested_latest_logs": 225,
+  "recovered_logs": 225,
+  "variant_counts": {
+    "rule_based": 75,
+    "single_llm": 75,
+    "personalized_pomdp": 75
+  },
+  "call_level_rows": 75,
+  "method_level_rows": 225,
+  "method_summary": [
+    {
+      "method": "rule_based",
+      "n": 75,
+      "decision_traceability_rate_pct": 100.0,
+      "structural_policy_compliance_pct": 100.0,
+      "mean_total_latency_ms": 0.032266666666666666,
+      "mean_llm_latency_ms": 0.0,
+      "mean_prompt_tokens": 0.0,
+      "mean_completion_tokens": 0.0,
+      "mean_total_tokens": 0.0,
+      "mean_response_length_chars": 113.04
+    },
+    {
+      "method": "single_llm",
+      "n": 75,
+      "decision_traceability_rate_pct": 0.0,
+      "structural_policy_compliance_pct": null,
+      "mean_total_latency_ms": 2566.9146666666666,
+      "mean_llm_latency_ms": 2565.0345333333335,
+      "mean_prompt_tokens": 274.48,
+      "mean_completion_tokens": 95.10666666666667,
+      "mean_total_tokens": 369.58666666666664,
+      "mean_response_length_chars": 406.82666666666665
+    },
+    {
+      "method": "personalized_pomdp",
+      "n": 75,
+      "decision_traceability_rate_pct": 100.0,
+      "structural_policy_compliance_pct": 100.0,
+      "mean_total_latency_ms": 4136.3928000000005,
+      "mean_llm_latency_ms": 4133.657333333334,
+      "mean_prompt_tokens": 1955.9466666666667,
+      "mean_completion_tokens": 169.28,
+      "mean_total_tokens": 2125.2266666666665,
+      "mean_response_length_chars": 682.4133333333333
+    }
+  ],
+  "strategy_distribution": [
+    {
+      "strategy": "scaffolding",
+      "count": 59,
+      "percentage": 78.66666666666667
+    },
+    {
+      "strategy": "socratic",
+      "count": 16,
+      "percentage": 21.333333333333332
+    }
+  ],
+  "note": "Recovered from committed ExperimentLog rows after the runner completed all expensive LLM calls but failed while writing CSV files."
+}

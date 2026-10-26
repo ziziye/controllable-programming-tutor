@@ -1,0 +1,266 @@
+﻿scenario_id,task_key,ceiling,repeat,method,shared_context_sha256,prompt_sha256,success,response,model,prompt_tokens,completion_tokens,generation_tokens,llm_request_latency_ms,method_stage_latency_ms,recorded_at
+S02,sum_even,1,1,context_matched_single_llm,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,b35c38ae8fd32a62c337a61fed865ed7e3d1a2b93ea942a80567aa111a172e6e,True,"You've set up the loop and accumulation logic perfectly! However, notice that the function doesn't send the final `total` back to whoever called it.
+
+In Python, what keyword do we use at the end of a function to output a value?",qwen3.7-plus,1016,51,1067,2080.81,2082.3518999968655,2026-10-13T15:41:59.436284+00:00
+S02,sum_even,1,1,externally_planned,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,c12e6109bc681f26b56559adfd7d07f5658676476191d0b9e5d7a8d62d99b0f1,True,"You've done a great job setting up the loop and accumulating the sum correctly! The logic inside the function looks solid.
+
+However, notice that when you call this function, it currently returns `None`. In Python, if a function doesn't explicitly send a value back, it defaults to `None`.
+
+Where should you add a statement to ensure the final calculated `total` is sent back to whoever called the function?",qwen3.7-plus,1563,85,1648,2685.85,2688.3731999987504,2026-10-13T15:42:02.192731+00:00
+S02,sum_even,1,2,externally_planned,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,c12e6109bc681f26b56559adfd7d07f5658676476191d0b9e5d7a8d62d99b0f1,True,"You've done a great job setting up the loop and accumulating the even numbers into `total`. The logic inside the loop looks correct!
+
+However, once the loop finishes checking all the numbers, what needs to happen so that the function sends the final `total` back to whoever called it?",qwen3.7-plus,1563,59,1622,1702.61,1706.4833999902476,2026-10-13T15:42:03.941012+00:00
+S02,sum_even,1,2,context_matched_single_llm,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,b35c38ae8fd32a62c337a61fed865ed7e3d1a2b93ea942a80567aa111a172e6e,True,"You've correctly set up the loop and the accumulation logic inside it. However, notice that after the loop finishes checking all the numbers, the function doesn't explicitly send the final `total` back to whoever called it.
+
+In Python, if a function doesn't have a specific command to output a result, what value does it return by default?",qwen3.7-plus,1016,70,1086,2125.32,2126.8631999992067,2026-10-13T15:42:06.070293+00:00
+S02,sum_even,1,3,context_matched_single_llm,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,b35c38ae8fd32a62c337a61fed865ed7e3d1a2b93ea942a80567aa111a172e6e,True,"You've correctly set up the loop and accumulation logic inside the function. However, notice that after the loop finishes calculating the `total`, the function doesn't send that value back to whoever called it.
+
+In Python, what keyword do you need to use at the end of the function to output the final `total`?",qwen3.7-plus,1016,65,1081,2244.92,2246.506999988924,2026-10-13T15:42:08.319630+00:00
+S02,sum_even,1,3,externally_planned,779211832451f530aa75d7e20d0e938a5d31f9cb991acf8abdddf992b5a8eab6,c12e6109bc681f26b56559adfd7d07f5658676476191d0b9e5d7a8d62d99b0f1,True,"You've successfully calculated the sum inside the loop, which is great! However, notice that the function isn't sending that result back to whoever called it.
+
+In Python, what keyword do we use at the end of a function to output a value?",qwen3.7-plus,1563,51,1614,2493.32,2495.6468000018504,2026-10-13T15:42:10.817347+00:00
+S02,sum_even,2,1,context_matched_single_llm,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,59454cee6a226bb19d2dd140141a5ca3785112b2ac459e064e60c2d7adcaa947,True,"You've set up the loop and accumulation logic perfectly! The variable `total` is correctly updating with each even number.
+
+However, notice that after the loop finishes, the function doesn't send the result back to whoever called it. In Python, if a function doesn't explicitly return a value, it returns `None`.
+
+Where should you place a `return` statement to ensure the final calculated sum is output?",qwen3.7-plus,1016,84,1100,2337.4,2340.3800999949453,2026-10-13T15:42:13.160091+00:00
+S02,sum_even,2,1,externally_planned,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,308758f4d5c781736b70f1190298bcd58bc4e848de5e4805482a093f0992587e,True,"You have correctly set up the loop and the accumulation logic! The variable `total` is being updated properly inside the function.
+
+However, there is one final step needed to send that calculated value back to whoever called the function. Without this step, Python functions return `None` by default.
+
+Look at the very end of your function (after the loop finishes). What statement do you need to add to explicitly output the value stored in `total`?",qwen3.7-plus,1595,92,1687,2749.67,2753.6579000152415,2026-10-13T15:42:15.918011+00:00
+S02,sum_even,2,2,externally_planned,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,308758f4d5c781736b70f1190298bcd58bc4e848de5e4805482a093f0992587e,True,"You have successfully set up the loop and the accumulation logic to calculate the sum. The variable `total` is being updated correctly inside the function.
+
+However, there is one final step needed to make this result available to whoever calls the function. In Python, variables created inside a function are local to that function. To send the calculated `total` back out, you need to use a specific keyword at the end of your function body.
+
+Can you add that statement after your loop finishes to return the final value?",qwen3.7-plus,1595,104,1699,2504.43,2507.3471999930916,2026-10-13T15:42:18.467024+00:00
+S02,sum_even,2,2,context_matched_single_llm,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,59454cee6a226bb19d2dd140141a5ca3785112b2ac459e064e60c2d7adcaa947,True,"You've correctly set up the loop and the accumulation logic inside it. However, notice that after the loop finishes checking all the numbers, the function doesn't explicitly send the final `total` back to whoever called it.
+
+In Python, if a function reaches the end without a specific command to return a value, what do you think it returns by default?",qwen3.7-plus,1016,72,1088,2262.68,2264.185299995006,2026-10-13T15:42:20.733716+00:00
+S02,sum_even,2,3,context_matched_single_llm,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,59454cee6a226bb19d2dd140141a5ca3785112b2ac459e064e60c2d7adcaa947,True,"You've successfully set up the loop and the accumulation logic inside it. However, notice that after the loop finishes checking all the numbers, the function doesn't send the final `total` back to whoever called it.
+
+In Python, if a function doesn't explicitly return a value, what does it return by default? Where should you place the statement to fix this?",qwen3.7-plus,1016,74,1090,2206.41,2208.6788000015076,2026-10-13T15:42:22.944664+00:00
+S02,sum_even,2,3,externally_planned,d1a0f5f87e12cd8fb1fba3f77a2e32839050acdf381af07179f992f666777f55,308758f4d5c781736b70f1190298bcd58bc4e848de5e4805482a093f0992587e,True,"You have successfully set up the loop and the accumulation logic inside it. The variable `total` is correctly updated as the code iterates through the numbers.
+
+However, there is one final step needed to make this function work as intended. In Python, a function must explicitly send a value back to the caller using a specific keyword. Without this, the function finishes its work but returns `None` by default.
+
+Look at the indentation of your last line. Where should you place the statement that sends the final `total` value back?",qwen3.7-plus,1595,109,1704,2691.11,2694.113200006541,2026-10-13T15:42:25.641709+00:00
+S08,count_vowels,1,1,externally_planned,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,f992b9abc5e4423fa735f38637515bcec7760732e835f4b75d4bda029a664ff0,True,"You're on the right track with iterating through the characters and normalizing the text! However, notice that `any()` stops as soon as it finds the first match and returns a boolean (`True` or `False`).
+
+Since we need to know *how many* vowels are in the string, what kind of variable could you use to keep a running total as you check each character?",qwen3.7-plus,1549,78,1627,2521.91,2527.3537000030046,2026-10-13T15:42:31.321181+00:00
+S08,count_vowels,1,1,context_matched_single_llm,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,2440b05dda4ceebb4b1a516460b4e6e30b8eaca5bd2600973a5a2da0b5abba6b,True,"You're on the right track with iterating through the characters and checking for vowels! However, notice that `any()` returns a boolean (`True` or `False`) indicating if *at least one* vowel exists, rather than counting *how many* vowels are present.
+
+Since the goal is to return an integer count, what Python tool or pattern could you use to keep a running total of matches instead of just checking for existence?",qwen3.7-plus,1002,87,1089,3063.15,3065.2597000007518,2026-10-13T15:42:34.389055+00:00
+S08,count_vowels,1,2,externally_planned,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,f992b9abc5e4423fa735f38637515bcec7760732e835f4b75d4bda029a664ff0,True,"You're on the right track by iterating through the characters and checking for vowels! However, notice that `any()` stops as soon as it finds *one* match and returns `True` or `False`.
+
+Since we want to know **how many** vowels are in the text, what kind of value should our function return instead of a boolean? How might you modify your loop to keep a running total of the matches found?",qwen3.7-plus,1549,87,1636,2599.29,2604.769400000805,2026-10-13T15:42:36.998248+00:00
+S08,count_vowels,1,2,context_matched_single_llm,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,2440b05dda4ceebb4b1a516460b4e6e30b8eaca5bd2600973a5a2da0b5abba6b,True,"You're very close! Your code correctly identifies if *any* vowel exists, but `any()` returns a boolean (`True` or `False`).
+
+The goal is to return the total **count** of vowels. Instead of checking for existence, how can you modify the logic to keep a running total of how many times a character matches a vowel?",qwen3.7-plus,1002,71,1073,2119.52,2121.203200003947,2026-10-13T15:42:39.123418+00:00
+S08,count_vowels,1,3,externally_planned,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,f992b9abc5e4423fa735f38637515bcec7760732e835f4b75d4bda029a664ff0,True,"You're on the right track by iterating through the characters and checking for vowels! However, notice that `any()` stops as soon as it finds the first match and returns `True` or `False`.
+
+Since we need to return the total **count** of vowels (an integer), how might you modify the logic to keep a running total instead of just checking for existence?",qwen3.7-plus,1549,76,1625,2407.5,2411.107699983404,2026-10-13T15:42:41.537707+00:00
+S08,count_vowels,1,3,context_matched_single_llm,c658f19f75ea43e65d9b0c9330c7419d4b5309c7757c36e8a6e1df4661a558c6,2440b05dda4ceebb4b1a516460b4e6e30b8eaca5bd2600973a5a2da0b5abba6b,True,"You're very close! Your code correctly identifies if *any* vowel exists, but `any()` returns a boolean (`True` or `False`) rather than the total number of vowels.
+
+To get a count, think about how you might accumulate a total as you check each character. What Python feature or operation could help you keep a running total of matches instead of just checking for existence?",qwen3.7-plus,1002,79,1081,2612.07,2613.9351000019815,2026-10-13T15:42:44.154170+00:00
+S08,count_vowels,2,1,externally_planned,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,09be32122efefc653af038ba5ed24394cf4b405369f14ec5cf525b5a66657b3f,True,"You are very close! The issue is that `any()` stops as soon as it finds the first match and returns `True` or `False`. Since the goal is to **count** how many vowels are present, we need a way to keep a running total.
+
+Here is a step-by-step approach to fix this:
+
+1.  **Initialize a counter**: Before the loop starts, create a variable (e.g., `count`) and set it to `0`.
+2.  **Iterate and Check**: Loop through each character in the lowercased text.
+3.  **Increment**: Inside the loop, if the character is a vowel, add `1` to your `count` variable.
+4.  **Return**: After the loop finishes, return the final value of `count`.
+
+Try restructuring your code to use this pattern instead of `any()`.",qwen3.7-plus,1581,181,1762,4122.26,4125.461300005554,2026-10-13T15:42:48.321972+00:00
+S08,count_vowels,2,1,context_matched_single_llm,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,a12ca87a6108135847752a835886e83b972336af0d1031a5f628889401f6a116,True,"You're very close! Your code correctly identifies if *any* vowel exists, but `any()` returns a boolean (`True` or `False`). The goal is to return the total **count** of vowels as an integer.
+
+Instead of checking for existence, how can you modify your loop to keep a running total of how many times a vowel appears?",qwen3.7-plus,1002,72,1074,2497.63,2500.349100009771,2026-10-13T15:42:50.825322+00:00
+S08,count_vowels,2,2,externally_planned,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,09be32122efefc653af038ba5ed24394cf4b405369f14ec5cf525b5a66657b3f,True,"You are very close! The issue is that `any()` stops as soon as it finds the first match and returns `True` or `False`. Since we need to count *all* vowels, we need a way to keep a running total.
+
+Let's break this down into two steps:
+
+1.  **Initialize a counter**: Before the loop starts, create a variable (e.g., `count`) and set it to 0.
+2.  **Update inside the loop**: Instead of using `any()`, iterate through each character. If the character is a vowel, increase your `count` by 1.
+
+Try restructuring your code to use a standard `for` loop with these two changes. How would you write the line that increases the count?",qwen3.7-plus,1581,158,1739,4025.61,4030.073900008574,2026-10-13T15:42:54.931592+00:00
+S08,count_vowels,2,2,context_matched_single_llm,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,a12ca87a6108135847752a835886e83b972336af0d1031a5f628889401f6a116,True,"You're very close! Your code correctly identifies if *any* vowel exists, but `any()` returns a boolean (`True` or `False`). The goal is to return the total **count** of vowels as an integer.
+
+Instead of checking for existence, how can you modify your loop to keep a running total of how many times a vowel appears?",qwen3.7-plus,1002,72,1074,2043.49,2045.3714999894146,2026-10-13T15:42:56.982035+00:00
+S08,count_vowels,2,3,externally_planned,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,09be32122efefc653af038ba5ed24394cf4b405369f14ec5cf525b5a66657b3f,True,"You are very close! The issue is that `any()` checks if *at least one* vowel exists and returns `True` or `False`, but we need to count *how many* vowels are present.
+
+To fix this, let's break it down into two steps:
+1. Initialize a counter variable (e.g., `count = 0`) before the loop.
+2. Inside the loop, instead of using `any()`, check if the character is a vowel. If it is, increment your counter by 1.
+
+Try updating your code to use a standard `for` loop with a counter variable.",qwen3.7-plus,1581,129,1710,3013.66,3016.176599994651,2026-10-13T15:43:00.000823+00:00
+S08,count_vowels,2,3,context_matched_single_llm,aa1f16e204df5208ff40dff0364d3dcb52239d791d7a6d2c23202537680d5f01,a12ca87a6108135847752a835886e83b972336af0d1031a5f628889401f6a116,True,"You're on the right track by iterating through the characters and checking if they are vowels! However, notice that `any()` stops as soon as it finds *one* match and returns `True` or `False`.
+
+The goal here is to count *how many* vowels appear in the string. Instead of checking for existence, how could you keep a running total of every time you find a vowel?",qwen3.7-plus,1002,82,1084,2584.91,2586.902499999269,2026-10-13T15:43:02.589995+00:00
+S12,find_max,1,1,externally_planned,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,f07d9d514b4b279db6d044ecd413d925b5b17efe9b23d0844b5eae5230be7dc3,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a specific issue when the list contains only negative numbers (like `[-5, -2, -9]`).
+
+Since `0` is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns `0`.
+
+How could you initialize `current` so that it starts with a value actually present in the list, ensuring it gets updated correctly even if all numbers are negative?",qwen3.7-plus,1589,109,1698,2977.1,2982.428899995284,2026-10-13T15:43:09.117026+00:00
+S12,find_max,1,1,context_matched_single_llm,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,4437a747f2d6a4da1bf42f1e643aa3c14c4ca5dd89f99afb02ac88c5395ab651,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a problem when the list contains only negative numbers (like `[-5, -2]`). Since no negative number is greater than 0, your function would incorrectly return 0.
+
+How could you initialize `current` using a value from the `numbers` list itself to ensure it starts with a valid candidate for the maximum?",qwen3.7-plus,1042,89,1131,3136.54,3141.759699981776,2026-10-13T15:43:12.262027+00:00
+S12,find_max,1,2,externally_planned,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,f07d9d514b4b279db6d044ecd413d925b5b17efe9b23d0844b5eae5230be7dc3,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a specific issue when the list contains only negative numbers (like `[-5, -2, -9]`).
+
+Since `0` is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns `0`.
+
+If you can't assume the list contains positive numbers, what value from the input list itself would be a safe starting point for `current` to ensure it gets updated correctly?",qwen3.7-plus,1589,112,1701,3710.44,3714.720000003581,2026-10-13T15:43:15.980387+00:00
+S12,find_max,1,2,context_matched_single_llm,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,4437a747f2d6a4da1bf42f1e643aa3c14c4ca5dd89f99afb02ac88c5395ab651,True,"You're on the right track with the loop structure! However, initializing `current` to 0 causes issues when the list contains only negative numbers (like `[-5, -2]`), because 0 is larger than any of those values.
+
+If you can't assume the list has positive numbers, what value from the list itself could you use to start your comparison to ensure you don't miss the true maximum?",qwen3.7-plus,1042,86,1128,2299.55,2301.766700009466,2026-10-13T15:43:18.285284+00:00
+S12,find_max,1,3,externally_planned,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,f07d9d514b4b279db6d044ecd413d925b5b17efe9b23d0844b5eae5230be7dc3,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes an issue when the list contains only negative numbers (like `[-5, -2, -9]`).
+
+Since `0` is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns `0`.
+
+How could you initialize `current` so that it starts with a value actually present in the list, ensuring it gets updated correctly even if all numbers are negative?",qwen3.7-plus,1589,108,1697,3258.82,3261.915899987798,2026-10-13T15:43:21.550673+00:00
+S12,find_max,1,3,context_matched_single_llm,34ce09f88489d3546309ee9bc031fe27cf9bf8348e4c6d4e3eabcf4bd7c21ec8,4437a747f2d6a4da1bf42f1e643aa3c14c4ca5dd89f99afb02ac88c5395ab651,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a problem if the list contains only negative numbers (like `[-5, -2]`). Since no negative number is greater than 0, your function would incorrectly return 0.
+
+How could you initialize `current` using a value from the list itself to ensure it starts with a valid candidate?",qwen3.7-plus,1042,83,1125,2445.27,2446.594799985178,2026-10-13T15:43:23.999577+00:00
+S12,find_max,2,1,context_matched_single_llm,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,65ac3404a04f972a517ee59702fd18f2ca8373473de890a9835bf5a18a38fd80,True,"You're on the right track with the loop and comparison logic! However, initializing `current` to `0` causes a problem when the list contains only negative numbers (like `[-5, -2, -9]`). Since 0 is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns 0.
+
+How could you initialize `current` so that it starts with a value actually present in the list, ensuring it gets updated correctly even if all numbers are negative?",qwen3.7-plus,1042,108,1150,2722.45,2724.4804999936605,2026-10-13T15:43:26.727187+00:00
+S12,find_max,2,1,externally_planned,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,3d384f41e7ce1b7d18805df73a7f0ff88f4442f3b30e8053f1df470c9326518e,True,"You're on the right track with the loop structure! The issue lies in how we start our comparison.
+
+Currently, you initialize `current = 0`. Think about what happens if the list contains only negative numbers, like `[-5, -2, -9]`. Since 0 is greater than all these numbers, your condition `n > current` never becomes true, and the function incorrectly returns 0.
+
+To fix this, we need an initial value that is guaranteed to be smaller than or equal to any number in the list. A common strategy is to initialize the accumulator with the **first element** of the list itself.
+
+Try updating your code to:
+1. Set `current` to `numbers[0]`.
+2. Start your loop from the second element (index 1) onwards, or keep the loop as is but ensure the initialization is robust.
+
+How would you modify the initialization line to use the first item in the list?",qwen3.7-plus,1621,198,1819,5082.19,5086.93449999555,2026-10-13T15:43:31.816742+00:00
+S12,find_max,2,2,context_matched_single_llm,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,65ac3404a04f972a517ee59702fd18f2ca8373473de890a9835bf5a18a38fd80,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a logical error when the list contains only negative numbers (e.g., `[-5, -2]`). Since `0` is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns `0`.
+
+To fix this, think about what value you could use for `current` that guarantees it will be replaced by the first element in the list, regardless of whether that element is positive or negative. What if you initialized `current` using the list itself?",qwen3.7-plus,1042,126,1168,3152.72,3157.1272000001045,2026-10-13T15:43:34.977125+00:00
+S12,find_max,2,2,externally_planned,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,3d384f41e7ce1b7d18805df73a7f0ff88f4442f3b30e8053f1df470c9326518e,True,"You're on the right track with using a loop to check each number! The issue lies in how we start our comparison.
+
+Currently, you initialize `current = 0`. Consider what happens if the input list is `[-5, -2, -9]`. Since all these numbers are less than 0, your condition `n > current` will never be true, and the function will incorrectly return 0.
+
+To fix this, we need an initial value that is guaranteed to be smaller than or equal to any number in the list. A reliable strategy is to initialize your accumulator with the **first element** of the list itself.
+
+Try updating your code to:
+1. Set `current` to `numbers[0]`.
+2. Adjust your loop so it starts checking from the **second** element (index 1) onwards, since we've already accounted for the first one.",qwen3.7-plus,1621,185,1806,4313.0,4318.033300005482,2026-10-13T15:43:39.299429+00:00
+S12,find_max,2,3,externally_planned,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,3d384f41e7ce1b7d18805df73a7f0ff88f4442f3b30e8053f1df470c9326518e,True,"You're on the right track with the loop structure! The issue lies in how we start our comparison.
+
+Currently, you initialize `current = 0`. Think about what happens if the list contains only negative numbers, like `[-5, -2, -9]`. Since 0 is greater than all of these, your condition `n > current` never becomes true, and the function incorrectly returns 0.
+
+To fix this, we need an initial value that is guaranteed to be smaller than or equal to any number in the list. A reliable strategy is to initialize `current` with the **first element** of the list before starting the loop.
+
+Try updating your code to:
+1. Set `current` to `numbers[0]`.
+2. Start your loop from the second element (index 1) onwards, or keep the loop as is (it will just compare the first element to itself once, which is harmless).
+
+Give that a try and see if it handles negative numbers correctly!",qwen3.7-plus,1621,208,1829,4288.3,4292.050000003655,2026-10-13T15:43:43.597285+00:00
+S12,find_max,2,3,context_matched_single_llm,b07ed2bc50228680431c0adc067847a284bfb715318da4a13813ce6248ce8be6,65ac3404a04f972a517ee59702fd18f2ca8373473de890a9835bf5a18a38fd80,True,"You're on the right track with the loop structure! However, initializing `current` to `0` causes a logical error when the list contains only negative numbers (e.g., `[-5, -2]`). Since `0` is greater than any negative number, your condition `n > current` never becomes true, and the function incorrectly returns `0`.
+
+How could you initialize `current` so that it starts with a value actually present in the list, ensuring it gets updated correctly even if all numbers are negative?",qwen3.7-plus,1042,107,1149,2618.57,2620.2230000053532,2026-10-13T15:43:46.220387+00:00
+S19,palindrome,1,1,externally_planned,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,527dd83d0658a54dffd3783b9770f3d3d24262321a5275dbac2cfa87a532a1c1,True,"You're on the right track by normalizing the text to lowercase. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable `text` to itself, this will always result in `True`. To check if a word is a palindrome, what other version of the string do you need to compare `text` against?",qwen3.7-plus,1544,75,1619,2383.32,2386.0052000090946,2026-10-13T15:43:51.275360+00:00
+S19,palindrome,1,1,context_matched_single_llm,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,6b44010e7c8702d7d9ff3645e2f06b1a0118535e776f617234cee1eda9b6911a,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your comparison: `text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare the normalized `text` against?",qwen3.7-plus,995,63,1058,2378.05,2381.1640000058105,2026-10-13T15:43:53.658785+00:00
+S19,palindrome,1,2,externally_planned,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,527dd83d0658a54dffd3783b9770f3d3d24262321a5275dbac2cfa87a532a1c1,True,"You're on the right track by normalizing the text to lowercase. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable `text` to itself, this will always be `True`. To check for a palindrome, what should you compare the normalized `text` against?",qwen3.7-plus,1544,66,1610,2093.67,2096.7043999989983,2026-10-13T15:43:55.758901+00:00
+S19,palindrome,1,2,context_matched_single_llm,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,6b44010e7c8702d7d9ff3645e2f06b1a0118535e776f617234cee1eda9b6911a,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare `text` against instead?",qwen3.7-plus,995,64,1059,1963.49,1965.637900008005,2026-10-13T15:43:57.727251+00:00
+S19,palindrome,1,3,externally_planned,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,527dd83d0658a54dffd3783b9770f3d3d24262321a5275dbac2cfa87a532a1c1,True,"You're on the right track by normalizing the text to lowercase. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable `text` to itself, this will always be true. To check for a palindrome, what should you compare the normalized `text` against?",qwen3.7-plus,1544,65,1609,2242.59,2245.888899997226,2026-10-13T15:44:00.015108+00:00
+S19,palindrome,1,3,context_matched_single_llm,ac7d6201939ca566a5ccd8903a86ee62e5ade355e7c8bcf44991b2c8fb82048c,6b44010e7c8702d7d9ff3645e2f06b1a0118535e776f617234cee1eda9b6911a,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare `text` against instead?",qwen3.7-plus,995,64,1059,1983.15,1984.738400002243,2026-10-13T15:44:02.003814+00:00
+S19,palindrome,2,1,externally_planned,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,b28f4c7e9122bb9b75e8da89ef47325e840087f2f2118d62a1c1cc478595564b,True,"You are on the right track by normalizing the string with `.lower()`. However, a palindrome is defined by how the string reads **backwards** compared to forwards.
+
+Currently, your code compares `text` to `text`, which will always be true. To fix this, you need to compare the normalized string against its reversed version.
+
+In Python, you can reverse a string using slice notation: `text[::-1]`.
+
+Try updating your return statement to compare `text` with its reversed counterpart.",qwen3.7-plus,1576,105,1681,2751.41,2753.9917999965837,2026-10-13T15:44:04.760868+00:00
+S19,palindrome,2,1,context_matched_single_llm,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,3093e905890d59797a5cfb258a8526fa7549b1546feed02c3ed140c1bb9d2db4,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your return statement: `text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare the normalized `text` against?",qwen3.7-plus,995,64,1059,2141.61,2143.3215999859385,2026-10-13T15:44:06.907288+00:00
+S19,palindrome,2,2,context_matched_single_llm,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,3093e905890d59797a5cfb258a8526fa7549b1546feed02c3ed140c1bb9d2db4,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare `text` against instead?",qwen3.7-plus,995,64,1059,2093.41,2094.979700006661,2026-10-13T15:44:09.015665+00:00
+S19,palindrome,2,2,externally_planned,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,b28f4c7e9122bb9b75e8da89ef47325e840087f2f2118d62a1c1cc478595564b,True,"You're on the right track by normalizing the string to lowercase! However, there is a small logical issue in your comparison.
+
+Currently, your code checks `text == text`. Since any variable is always equal to itself, this will always return `True`, regardless of whether the word is actually a palindrome.
+
+To fix this, you need to compare the normalized string against its **reversed** version. In Python, you can reverse a string using slicing with `[::-1]`.
+
+Try updating your return statement to compare `text` with `text[::-1]`.",qwen3.7-plus,1576,117,1693,3032.32,3039.3553000030806,2026-10-13T15:44:12.058006+00:00
+S19,palindrome,2,3,context_matched_single_llm,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,3093e905890d59797a5cfb258a8526fa7549b1546feed02c3ed140c1bb9d2db4,True,"You're on the right track by normalizing the string with `.lower()`. However, look closely at your return statement: `return text == text`.
+
+Since you are comparing the variable to itself, this will always be `True`. To check for a palindrome, what should you compare `text` against instead?",qwen3.7-plus,995,64,1059,2092.94,2094.806900000549,2026-10-13T15:44:14.157721+00:00
+S19,palindrome,2,3,externally_planned,6584f089b1153a2b9850b0417d21884f5dbf7a8e2bffe6c61048912538b97220,b28f4c7e9122bb9b75e8da89ef47325e840087f2f2118d62a1c1cc478595564b,True,"You're on the right track by normalizing the string to lowercase! However, there is a small logical issue in your comparison.
+
+Currently, your code checks `text == text`. Since any variable is always equal to itself, this will always return `True`, regardless of whether the word is actually a palindrome.
+
+To fix this, you need to compare the normalized string against its **reversed** version. Here is how you can break it down:
+
+1.  Keep your normalization step: `text = text.lower()`
+2.  Create a new variable that holds the reversed version of `text`. In Python, you can reverse a string using slicing: `text[::-1]`.
+3.  Compare the original normalized `text` with this new reversed variable.
+
+Try updating your return statement to compare `text` with its reversed counterpart.",qwen3.7-plus,1576,174,1750,3714.23,3718.3395000029122,2026-10-13T15:44:17.920034+00:00
+S22,safe_dict_get,1,1,context_matched_single_llm,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,be140a3ef0dc145325aa301cabf584c9df08f9a9c047eee2146b22b1db3142d3,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly will cause your program to crash if the `'age'` key is missing.
+
+What built-in dictionary method allows you to retrieve a value safely by providing a default return value if the key isn't found?",qwen3.7-plus,992,62,1054,1810.3,1812.738199994783,2026-10-13T15:44:22.483559+00:00
+S22,safe_dict_get,1,1,externally_planned,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,3416752f87ef79680f44246b8dae1bd1baf09b05b5ced0c424565158fefd9a42,True,"You're on the right track with accessing the dictionary, but using `person['age']` will cause the program to crash if the `'age'` key isn't present.
+
+What happens in Python when you try to access a key that doesn't exist in a dictionary? Can you think of a dictionary method that allows you to retrieve a value safely, perhaps by providing a default value if the key is missing?",qwen3.7-plus,1539,84,1623,2766.45,2770.0610000174493,2026-10-13T15:44:25.258986+00:00
+S22,safe_dict_get,1,2,context_matched_single_llm,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,be140a3ef0dc145325aa301cabf584c9df08f9a9c047eee2146b22b1db3142d3,True,"You're on the right track with accessing the dictionary, but using bracket notation (`person['age']`) will cause your program to crash if the key `'age'` is missing.
+
+What happens when you try to access a key that doesn't exist in a dictionary using brackets? Can you think of a dictionary method that allows you to retrieve a value safely by providing a default fallback?",qwen3.7-plus,992,78,1070,2771.47,2774.3434000003617,2026-10-13T15:44:28.037184+00:00
+S22,safe_dict_get,1,2,externally_planned,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,3416752f87ef79680f44246b8dae1bd1baf09b05b5ced0c424565158fefd9a42,True,"You're on the right track with accessing the dictionary, but using `person['age']` will cause the program to crash if the `'age'` key is missing.
+
+What built-in dictionary method allows you to retrieve a value safely by providing a default return value if the key doesn't exist?",qwen3.7-plus,1539,61,1600,1975.58,1978.2007999892812,2026-10-13T15:44:30.018559+00:00
+S22,safe_dict_get,1,3,context_matched_single_llm,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,be140a3ef0dc145325aa301cabf584c9df08f9a9c047eee2146b22b1db3142d3,True,"You're on the right track with accessing the dictionary, but using bracket notation (`person['age']`) can cause your program to crash if the key `'age'` isn't present.
+
+What is a specific dictionary method in Python that allows you to retrieve a value safely by providing a default return value if the key is missing?",qwen3.7-plus,992,67,1059,2231.23,2234.1521000053035,2026-10-13T15:44:32.263441+00:00
+S22,safe_dict_get,1,3,externally_planned,d8fe6ccf1ef1781966993efcd3d30caff7c7a94d023d440dc0cce9af88374d86,3416752f87ef79680f44246b8dae1bd1baf09b05b5ced0c424565158fefd9a42,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly can cause your program to crash if the key `'age'` isn't present.
+
+What happens in Python when you try to access a key that doesn't exist in a dictionary? Can you think of a dictionary method that allows you to retrieve a value safely, perhaps by providing a default return value if the key is missing?",qwen3.7-plus,1539,86,1625,2279.27,2283.219899996766,2026-10-13T15:44:34.550171+00:00
+S22,safe_dict_get,2,1,context_matched_single_llm,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,9130431a07009380960e2e2cf6b26a6696a4cc7d0b66a1c2605d1fb9b04f2d86,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly will cause a `KeyError` if the key `'age'` isn't present.
+
+Python dictionaries have a built-in method specifically designed to handle missing keys safely by returning a default value instead of crashing. Do you recall which dictionary method allows you to specify a default return value?",qwen3.7-plus,992,77,1069,2770.9,2772.4290000041947,2026-10-13T15:44:37.326005+00:00
+S22,safe_dict_get,2,1,externally_planned,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,fbc9c753741e9a89da5d2a6fda6844e32e6d0f957d5610b4f2abc732af3845ad,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly will cause your program to crash if the `'age'` key is missing.
+
+To fix this safely, let's break it down:
+
+1.  **Identify the risk**: Direct access raises a `KeyError` when the key doesn't exist.
+2.  **Use a safer method**: Python dictionaries have a built-in method called `.get()` that allows you to retrieve a value without crashing if the key is absent.
+
+Try replacing `person['age']` with `person.get('age')`. This will return `None` (or a default value you specify) instead of raising an error if `'age'` isn't in the dictionary. Give that a try!",qwen3.7-plus,1571,161,1732,4199.63,4202.321699995082,2026-10-13T15:44:41.531202+00:00
+S22,safe_dict_get,2,2,context_matched_single_llm,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,9130431a07009380960e2e2cf6b26a6696a4cc7d0b66a1c2605d1fb9b04f2d86,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly can cause your program to crash if the `'age'` key isn't present.
+
+What happens in Python when you try to access a key that doesn't exist in a dictionary? Can you think of a dictionary method that allows you to retrieve a value safely, perhaps by providing a default value if the key is missing?",qwen3.7-plus,992,85,1077,2659.65,2661.20580000279,2026-10-13T15:44:44.215690+00:00
+S22,safe_dict_get,2,2,externally_planned,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,fbc9c753741e9a89da5d2a6fda6844e32e6d0f957d5610b4f2abc732af3845ad,True,"You're on the right track with accessing dictionary values, but using square brackets `person['age']` will cause your program to crash if the key `'age'` is missing.
+
+To fix this safely, we can break it down into two steps:
+
+1.  **Check for existence**: Before trying to get the value, check if the key `'age'` actually exists in the `person` dictionary. You can use the `in` keyword for this (e.g., `'key' in dictionary`).
+2.  **Return the value or a default**: If the key exists, return the age. If it doesn't, return a safe default value (like `None` or `-1`) instead of crashing.
+
+Try modifying your function to include this check. How would you write an `if` statement to verify the key is present?",qwen3.7-plus,1571,175,1746,4191.46,4194.235100003425,2026-10-13T15:44:48.412107+00:00
+S22,safe_dict_get,2,3,context_matched_single_llm,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,9130431a07009380960e2e2cf6b26a6696a4cc7d0b66a1c2605d1fb9b04f2d86,True,"You're on the right track with accessing the dictionary, but using `person['age']` directly will cause your program to crash if the `'age'` key is missing.
+
+Python dictionaries have a built-in method specifically designed to handle this safely by returning a default value (like `None`) instead of raising an error. Do you recall which dictionary method allows you to specify a default return value?",qwen3.7-plus,992,81,1073,2920.9,2922.93279999285,2026-10-13T15:44:51.337812+00:00
+S22,safe_dict_get,2,3,externally_planned,50afc463f84d4ee20ccead1f19a931e89e4baf51dfabc93f189bacaf76657207,fbc9c753741e9a89da5d2a6fda6844e32e6d0f957d5610b4f2abc732af3845ad,True,"You're on the right track with accessing dictionary values, but using square brackets `person['age']` will cause your program to crash if the key `'age'` is missing.
+
+To fix this safely, let's break it down:
+
+1.  **Check for existence**: One way is to check if the key exists before accessing it. You can use the `in` keyword (e.g., `if 'age' in person:`).
+2.  **Use a built-in method**: Python dictionaries have a specific method designed for this exact scenario. It allows you to retrieve a value and provide a default fallback if the key isn't found.
+
+Try replacing the direct access with the `.get()` method. How would you rewrite `person['age']` using `.get()` to return `None` (or a specific default value) if `'age'` is not present?",qwen3.7-plus,1571,182,1753,4108.04,4110.694100003457,2026-10-13T15:44:55.489135+00:00

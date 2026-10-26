@@ -1,0 +1,38 @@
+{
+  "successful_generation_requests": 60,
+  "pair_count": 30,
+  "unique_scenarios": 5,
+  "model": "qwen3.7-plus",
+  "rating_status": "not evaluated",
+  "method_summary": [
+    {
+      "method": "context_matched_single_llm",
+      "n": 30,
+      "mean_prompt_tokens": 1009.4,
+      "sd_prompt_tokens": 18.594771233908183,
+      "mean_completion_tokens": 77.03333333333333,
+      "sd_completion_tokens": 15.6876479706352,
+      "mean_generation_tokens": 1086.4333333333334,
+      "sd_generation_tokens": 31.165501852964383,
+      "mean_llm_request_latency_ms": 2412.3503333333333,
+      "sd_llm_request_latency_ms": 365.524313276746,
+      "mean_method_stage_latency_ms": 2414.5463033322208,
+      "sd_method_stage_latency_ms": 365.949074933921
+    },
+    {
+      "method": "externally_planned",
+      "n": 30,
+      "mean_prompt_tokens": 1572.8,
+      "sd_prompt_tokens": 24.481379271488827,
+      "mean_completion_tokens": 116.0,
+      "sd_completion_tokens": 47.12565740875024,
+      "mean_generation_tokens": 1688.8,
+      "sd_generation_tokens": 66.57347509486715,
+      "mean_llm_request_latency_ms": 3096.168,
+      "sd_llm_request_latency_ms": 862.3595857813407,
+      "mean_method_stage_latency_ms": 3099.8554866668806,
+      "sd_method_stage_latency_ms": 862.5210065721908
+    }
+  ],
+  "limitations": "Pilot scenes and synthetic states only. Both use a common realization prompt and identical raw context. The external decision is the treatment difference; token lengths are not forced equal. This is a controlled planner comparison, not a rerun of the original deployed-executor prompt."
+}

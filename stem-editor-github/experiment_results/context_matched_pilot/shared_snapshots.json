@@ -1,0 +1,482 @@
+{
+  "S02": {
+    "diagnosis": {
+      "syntax_valid": true,
+      "is_correct": false,
+      "error_type": "logical_error",
+      "message": "The submission contains a logical error identified from execution evidence.",
+      "concept": "accumulation",
+      "misconception": "missing_return_statement",
+      "severity": "high",
+      "evidence": "The function calculates the sum correctly within the loop but fails to return the 'total' variable, resulting in a None (null) output for all test cases.",
+      "confidence": 1.0,
+      "diagnosis_source": "llm_semantic_fallback",
+      "question_type": "coding_task",
+      "requires_code_execution": true
+    },
+    "execution_result": {
+      "execution_success": true,
+      "syntax_valid": true,
+      "function_found": true,
+      "all_tests_passed": false,
+      "tests_run": 5,
+      "tests_passed": 0,
+      "tests_failed": 5,
+      "error_type": "test_failure",
+      "error_message": null,
+      "captured_output": "",
+      "test_results": [
+        {
+          "test_index": 1,
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": 12,
+          "actual": null,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 2,
+          "input": [
+            []
+          ],
+          "expected": 0,
+          "actual": null,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 3,
+          "input": [
+            [
+              2,
+              4,
+              8
+            ]
+          ],
+          "expected": 14,
+          "actual": null,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 4,
+          "input": [
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "expected": 0,
+          "actual": null,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 5,
+          "input": [
+            [
+              -2,
+              -1,
+              0,
+              3
+            ]
+          ],
+          "expected": -2,
+          "actual": null,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        }
+      ]
+    },
+    "confusion": 0.49999999999999983
+  },
+  "S08": {
+    "diagnosis": {
+      "syntax_valid": true,
+      "is_correct": false,
+      "error_type": "logical_error",
+      "message": "The submission contains a logical error identified from execution evidence.",
+      "concept": "loops",
+      "misconception": "confusing_aggregation_with_existence_check",
+      "severity": "high",
+      "evidence": "The student used `any()` which returns a boolean indicating if at least one vowel exists, instead of summing or counting the occurrences to return an integer count.",
+      "confidence": 0.95,
+      "diagnosis_source": "llm_semantic_fallback",
+      "question_type": "coding_task",
+      "requires_code_execution": true
+    },
+    "execution_result": {
+      "execution_success": true,
+      "syntax_valid": true,
+      "function_found": true,
+      "all_tests_passed": false,
+      "tests_run": 5,
+      "tests_passed": 2,
+      "tests_failed": 3,
+      "error_type": "test_failure",
+      "error_message": null,
+      "captured_output": "",
+      "test_results": [
+        {
+          "test_index": 1,
+          "input": [
+            "Hello World"
+          ],
+          "expected": 3,
+          "actual": true,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 2,
+          "input": [
+            ""
+          ],
+          "expected": 0,
+          "actual": false,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 3,
+          "input": [
+            "AEIOU"
+          ],
+          "expected": 5,
+          "actual": true,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 4,
+          "input": [
+            "rhythm"
+          ],
+          "expected": 0,
+          "actual": false,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 5,
+          "input": [
+            "Programming"
+          ],
+          "expected": 3,
+          "actual": true,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        }
+      ]
+    },
+    "confusion": 0.49999999999999994
+  },
+  "S12": {
+    "diagnosis": {
+      "syntax_valid": true,
+      "is_correct": false,
+      "error_type": "logical_error",
+      "message": "The submission contains a logical error identified from execution evidence.",
+      "concept": "accumulation",
+      "misconception": "incorrect_initialization_value",
+      "severity": "high",
+      "evidence": "The student initialized the accumulator 'current' to 0. When the input list contains only negative numbers (e.g., [-5, -2, -9]), 0 is greater than all elements, so the condition 'n > current' is never true, and the function incorrectly returns the initial value 0 instead of the actual maximum.",
+      "confidence": 0.95,
+      "diagnosis_source": "llm_semantic_fallback",
+      "question_type": "coding_task",
+      "requires_code_execution": true
+    },
+    "execution_result": {
+      "execution_success": true,
+      "syntax_valid": true,
+      "function_found": true,
+      "all_tests_passed": false,
+      "tests_run": 5,
+      "tests_passed": 4,
+      "tests_failed": 1,
+      "error_type": "test_failure",
+      "error_message": null,
+      "captured_output": "",
+      "test_results": [
+        {
+          "test_index": 1,
+          "input": [
+            [
+              3,
+              7,
+              2,
+              9,
+              4
+            ]
+          ],
+          "expected": 9,
+          "actual": 9,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 2,
+          "input": [
+            [
+              -5,
+              -2,
+              -9
+            ]
+          ],
+          "expected": -2,
+          "actual": 0,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 3,
+          "input": [
+            [
+              4
+            ]
+          ],
+          "expected": 4,
+          "actual": 4,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 4,
+          "input": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "expected": 2,
+          "actual": 2,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 5,
+          "input": [
+            [
+              100,
+              1,
+              50
+            ]
+          ],
+          "expected": 100,
+          "actual": 100,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        }
+      ]
+    },
+    "confusion": 0.49999999999999983
+  },
+  "S19": {
+    "diagnosis": {
+      "syntax_valid": true,
+      "is_correct": false,
+      "error_type": "logical_error",
+      "message": "The submission contains a logical error identified from execution evidence.",
+      "concept": "comparison",
+      "misconception": "incorrect_comparison_logic",
+      "severity": "high",
+      "evidence": "The student compares the normalized string to itself (text == text) instead of comparing it to its reversed version, resulting in a tautology that always returns true.",
+      "confidence": 1.0,
+      "diagnosis_source": "llm_semantic_fallback",
+      "question_type": "coding_task",
+      "requires_code_execution": true
+    },
+    "execution_result": {
+      "execution_success": true,
+      "syntax_valid": true,
+      "function_found": true,
+      "all_tests_passed": false,
+      "tests_run": 5,
+      "tests_passed": 4,
+      "tests_failed": 1,
+      "error_type": "test_failure",
+      "error_message": null,
+      "captured_output": "",
+      "test_results": [
+        {
+          "test_index": 1,
+          "input": [
+            "level"
+          ],
+          "expected": true,
+          "actual": true,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 2,
+          "input": [
+            "Level"
+          ],
+          "expected": true,
+          "actual": true,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 3,
+          "input": [
+            "python"
+          ],
+          "expected": false,
+          "actual": true,
+          "passed": false,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 4,
+          "input": [
+            ""
+          ],
+          "expected": true,
+          "actual": true,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 5,
+          "input": [
+            "a"
+          ],
+          "expected": true,
+          "actual": true,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        }
+      ]
+    },
+    "confusion": 0.5710398766248073
+  },
+  "S22": {
+    "diagnosis": {
+      "syntax_valid": true,
+      "is_correct": false,
+      "error_type": "logical_error",
+      "message": "The submission contains a logical error identified from execution evidence.",
+      "concept": "safe_access",
+      "misconception": "unsafe_direct_key_access",
+      "severity": "high",
+      "evidence": "The student used direct bracket notation (person['age']) which raises a KeyError when the key is missing, instead of using a safe access method like .get() or checking for key existence.",
+      "confidence": 0.95,
+      "diagnosis_source": "llm_semantic_fallback",
+      "question_type": "coding_task",
+      "requires_code_execution": true
+    },
+    "execution_result": {
+      "execution_success": true,
+      "syntax_valid": true,
+      "function_found": true,
+      "all_tests_passed": false,
+      "tests_run": 5,
+      "tests_passed": 3,
+      "tests_failed": 2,
+      "error_type": "test_failure",
+      "error_message": null,
+      "captured_output": "",
+      "test_results": [
+        {
+          "test_index": 1,
+          "input": [
+            {
+              "name": "A",
+              "age": 20
+            }
+          ],
+          "expected": 20,
+          "actual": 20,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 2,
+          "input": [
+            {
+              "name": "B"
+            }
+          ],
+          "expected": null,
+          "actual": null,
+          "passed": false,
+          "runtime_error": "KeyError: 'age'",
+          "printed_output": ""
+        },
+        {
+          "test_index": 3,
+          "input": [
+            {
+              "age": 0
+            }
+          ],
+          "expected": 0,
+          "actual": 0,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        },
+        {
+          "test_index": 4,
+          "input": [
+            {}
+          ],
+          "expected": null,
+          "actual": null,
+          "passed": false,
+          "runtime_error": "KeyError: 'age'",
+          "printed_output": ""
+        },
+        {
+          "test_index": 5,
+          "input": [
+            {
+              "age": 35,
+              "city": "Tokyo"
+            }
+          ],
+          "expected": 35,
+          "actual": 35,
+          "passed": true,
+          "runtime_error": null,
+          "printed_output": ""
+        }
+      ]
+    },
+    "confusion": 0.4289601233751927
+  }
+}

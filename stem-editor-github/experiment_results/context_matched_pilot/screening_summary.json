@@ -1,0 +1,26 @@
+{
+  "context_matched_single_llm": {
+    "n": 30,
+    "keyword_occurrence": 25,
+    "diagnostic_pattern_match": 30,
+    "standalone_solution": 0,
+    "explicit_repair_review_flag": 0,
+    "complete_prose_algorithm_review_flag": 0,
+    "any_assistance_review_flag": 0,
+    "ceiling_1_review_flags": 0,
+    "ceiling_2_review_flags": 0,
+    "fenced_code_blocks": 0
+  },
+  "externally_planned": {
+    "n": 30,
+    "keyword_occurrence": 25,
+    "diagnostic_pattern_match": 30,
+    "standalone_solution": 0,
+    "explicit_repair_review_flag": 7,
+    "complete_prose_algorithm_review_flag": 1,
+    "any_assistance_review_flag": 8,
+    "ceiling_1_review_flags": 0,
+    "ceiling_2_review_flags": 8,
+    "fenced_code_blocks": 0
+  }
+}

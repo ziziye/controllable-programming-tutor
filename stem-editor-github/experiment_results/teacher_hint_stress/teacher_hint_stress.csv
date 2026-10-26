@@ -1,0 +1,7 @@
+﻿teacher_max_hint_level,selected_strategy,effective_hint_level,answer_policy,teacher_constraint_satisfied,most_likely_state,belief_entropy
+0,challenge,0,NO_ANSWER,True,medium_high,2.2269
+1,socratic,1,HINT_ONLY,True,medium_high,2.2269
+2,scaffolding,2,PARTIAL_SOLUTION,True,medium_high,2.2269
+3,scaffolding,2,PARTIAL_SOLUTION,True,medium_high,2.2269
+4,scaffolding,2,PARTIAL_SOLUTION,True,medium_high,2.2269
+5,scaffolding,2,PARTIAL_SOLUTION,True,medium_high,2.2269
